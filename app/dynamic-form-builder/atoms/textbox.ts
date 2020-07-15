@@ -34,7 +34,7 @@ console.log(x("bob")); // logs "bob1"
   }
   testFunction(variable){
     console.log('variable',variable)
-    document.getElementById(variable).innerText = this.field.value
+    document.getElementById(variable).innerHTML = (this.field.value && this.field.value.length > 0)? this.field.value : '______'
     console.log('this.field.value',this.field.value)
   }
 //       testFunction(){

@@ -14,21 +14,33 @@
 </div>
 
 <div class="col-sm-12">
- <div class="form-group" id = 'previewContainer'>
-    <div>This is a sample text.</div>
-    <div *ngIf = "fields[0].value.length > 0" style="color:red">First party name is <em id = 'first_party_name'></em> </div>
-    <div *ngIf = "fields[1].value.length > 0" style="color:blue">Second party name is <em id = 'second_party_name'></em> </div>
+ <div style="user-select: none;border: solid;
+height: 350px;
+width: 300px;
+background: aliceblue;
+padding: 15px 15px 15px 15px;
+font-size: 18px;" class="form-group" id = 'previewContainer'>
+	<div id="background">
+  <p id="bg-text">LegalTech</p>
+	</div>
+  <div id = "htmlContainer">
+    <div>This is a sample preview.</div>
+    <br>
+    <div style="color:red">First party name is <em id = 'first_party_name'>_____</em> </div>
+    <div *ngIf = "fields[1].value.length > 0" style="color:blue">Second party name is <em id = 'second_party_name'>_____</em></div>
     <div *ngIf = "fields[2].value.length > 0">Email is <em id = 'email_id'></em> </div>
-    <div>More content.</div>
+    <br>
+    <div>End of content.</div>
+  </div>
   </div>
 </div>
-<button (click) = "getContent()">Get content</button>
+<button (click) = "getContent()">Copy HTML Content</button>
 _____________________________________
-<div class="col-sm-12">
+<!-- <div class="col-sm-12">
  <div class="form-group" [formGroup]="form">
     <label>JSON</label>
     <textarea formControlName="fields" class="form-control" rows="3"></textarea>
   </div>
 </div>
-
+ -->
 

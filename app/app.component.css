@@ -122,3 +122,27 @@ input:focus ~ .highlight {
 	from { background:#5264AE; }
   to 	{ width:0; background:transparent; }
 }
+#background{
+    position:absolute;
+    z-index:0;
+    /* background:aliceblue; */
+    display:block;
+    min-height:50%; 
+    /* min-width:50%; */
+    color:yellow;
+}
+
+#htmlContainer{
+    position:absolute;
+    z-index:1;
+}
+
+#bg-text
+{
+  user-select: none;
+  padding-top: 60px;
+    color:lightgrey;
+    font-size:50px;
+    transform:rotate(320deg);
+    -webkit-transform:rotate(320deg);
+}
