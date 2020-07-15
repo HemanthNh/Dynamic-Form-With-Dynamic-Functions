@@ -14,14 +14,15 @@
 </div>
 
 <div class="col-sm-12">
- <div class="form-group">
+ <div class="form-group" id = 'previewContainer'>
     <div>This is a sample text.</div>
-    <div>First party name is <em id = 'fName'></em> </div>
-    <div>Second party name is <em id = 'lName'></em> </div>
-    <div>Email is <em id = 'email'></em> </div>
+    <div *ngIf = "fields[0].value.length > 0" style="color:red">First party name is <em id = 'first_party_name'></em> </div>
+    <div *ngIf = "fields[1].value.length > 0" style="color:blue">Second party name is <em id = 'second_party_name'></em> </div>
+    <div *ngIf = "fields[2].value.length > 0">Email is <em id = 'email_id'></em> </div>
     <div>More content.</div>
   </div>
 </div>
+<button (click) = "getContent()">Get content</button>
 _____________________________________
 <div class="col-sm-12">
  <div class="form-group" [formGroup]="form">

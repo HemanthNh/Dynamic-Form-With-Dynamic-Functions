@@ -20,7 +20,7 @@ export class AppComponent {
       required: true,
       class: 'col-sm-6',
       click:`testFunction()`,
-      id:"fName"
+      id:"first_party_name"
     },
     {
       type: 'text',
@@ -29,7 +29,7 @@ export class AppComponent {
       value: '',
       required: true,
       class: 'col-sm-6',
-      id:"lName"
+      id:"second_party_name"
 
 
     },
@@ -40,7 +40,7 @@ export class AppComponent {
       value: '',
       required: true,
       class: 'col-sm-12',
-      id:"email"
+      id:"email_id"
 
     },
 
@@ -113,6 +113,15 @@ export class AppComponent {
   }
   testFunction(){
     console.log('Hellooooo')
+  }
+  getContent(){
+    let htmlContent = document.getElementById('previewContainer').innerHTML;
+    htmlContent = htmlContent.toString();
+    console.log('bbbb',htmlContent)
+    
+htmlContent = htmlContent.replace(/<!--[\s\S]*?-->/g, "")
+    // htmlContent = htmlContent.replace(/<\!--*-->/g, "");
+    console.log('dddd',htmlContent)
   }
   ngDistroy() {
     this.unsubcribe();
