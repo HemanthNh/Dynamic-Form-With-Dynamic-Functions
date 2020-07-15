@@ -19,7 +19,8 @@ export class AppComponent {
       value: '',
       required: true,
       class: 'col-sm-6',
-      click:`testFunction()`
+      click:`testFunction()`,
+      id:"fName"
     },
     {
       type: 'text',
@@ -27,7 +28,9 @@ export class AppComponent {
       label: 'Last Name',
       value: '',
       required: true,
-      class: 'col-sm-6'
+      class: 'col-sm-6',
+      id:"lName"
+
 
     },
     {
@@ -36,7 +39,9 @@ export class AppComponent {
       label: 'Email',
       value: '',
       required: true,
-      class: 'col-sm-12'
+      class: 'col-sm-12',
+      id:"email"
+
     },
 
     {

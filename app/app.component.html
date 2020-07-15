@@ -4,13 +4,30 @@
     <div style= "text-align: center;" class="card-header">L-Tech Templates</div>
     <div class="card-body">
       <dynamic-form-builder [fields]="getFields()"></dynamic-form-builder>
+      <!-- <div [formGroup]="form">
+        <input *ngIf="!field.multiline" [attr.type]="field.type" class="form-control" [(ngModel)]="names" (keyup)="testFunction()"  [id]="field.name" [name]="field.name" [formControlName]="field.name">
+        <textarea *ngIf="field.multiline" [class.is-invalid]="isDirty && !isValid" [formControlName]="field.name" [id]="field.name"
+        rows="9" class="form-control" [placeholder]="field.placeholder"></textarea>
+      </div>  -->
     </div>
   </div>
 </div>
 
+<div class="col-sm-12">
+ <div class="form-group">
+    <div>This is a sample text.</div>
+    <div>First party name is <em id = 'fName'></em> </div>
+    <div>Second party name is <em id = 'lName'></em> </div>
+    <div>Email is <em id = 'email'></em> </div>
+    <div>More content.</div>
+  </div>
+</div>
+_____________________________________
 <div class="col-sm-12">
  <div class="form-group" [formGroup]="form">
     <label>JSON</label>
     <textarea formControlName="fields" class="form-control" rows="3"></textarea>
   </div>
 </div>
+
+

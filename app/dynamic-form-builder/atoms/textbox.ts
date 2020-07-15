@@ -6,7 +6,7 @@ import { FormGroup } from '@angular/forms';
     selector: 'textbox',
     template: `
       <div [formGroup]="form">
-        <input *ngIf="!field.multiline" [attr.type]="field.type" class="form-control" [(ngModel)]="names" (keyup)="testFunction()"  [id]="field.name" [name]="field.name" [formControlName]="field.name">
+        <input *ngIf="!field.multiline" [attr.type]="field.type" class="form-control" [(ngModel)]="field.value" (keyup)="testFunction(field.id)"  [id]="field.name" [name]="field.name" [formControlName]="field.name">
         <textarea *ngIf="field.multiline" [class.is-invalid]="isDirty && !isValid" [formControlName]="field.name" [id]="field.name"
         rows="9" class="form-control" [placeholder]="field.placeholder"></textarea>
       </div> 
@@ -31,6 +31,11 @@ this.initFn()
 var sfunctionString = "(function testFunction(name) { return name + 1; })";
 var x = eval(sfunctionString);
 console.log(x("bob")); // logs "bob1"
+  }
+  testFunction(variable){
+    console.log('variable',variable)
+    document.getElementById(variable).innerText = this.field.value
+    console.log('this.field.value',this.field.value)
   }
 //       testFunction(){
 //     console.log('Hellooooo')
